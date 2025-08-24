@@ -1,22 +1,15 @@
-def print_board(parameter):
-    print(parameter['top-L']+'|'+parameter['top-M']+'|'+parameter['top-R'])
-    print(parameter['mid-L']+'|'+parameter['mid-M']+'|'+parameter['mid-R'])
-    print(parameter['low-L']+'|'+parameter['low-M']+'|'+parameter['low-R'])
+##pag 162 - jogo de fantasia
 
+import pprint
 
-tabuleiro = {'top-L':'', 'top-M':'', 'top-R':'',
-            'mid-L':'', 'mid-M':'', 'mid-R':'', 
-            'low-L':'', 'low-M':'', 'low-R':''}
+def display_inventory(param):
+    final = []
+    for i in param:
+        qtd = 0
+        qtd = qtd + param[i]
+        final.append(str(qtd)+' '+i)
+    pprint.pprint(final)
 
-turn = 'X'
-for i in range(9):
-    print_board(tabuleiro)
-    print('Rodada de '+turn+'.')
-    move = input('Escolha o espaço: ')
-    tabuleiro[move]=turn
-    if turn == 'X':
-        turn = 'O'
-    else:
-        turn = 'X'
-print_board(tabuleiro)
- 
+inventario = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
+
+display_inventory(inventario)
