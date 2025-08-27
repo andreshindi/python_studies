@@ -1,9 +1,9 @@
 #! python3
-# pw.py - um programa de repositório de senhas
+# programa de senhas
 
-var1 = 'var1'
-var2 = 'var2'
+passwords = {"email":"123456"}
 
-print(f""" test lines
-creating a {var1} record
-with 3 lines {var2}  """)
+import sys
+
+if len(sys.argv < 2):
+    print
